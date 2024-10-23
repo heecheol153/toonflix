@@ -1,6 +1,5 @@
 <<<<<<< HEAD
 # toonflix
-This is test for Github.
 =======
 <<<<<<< HEAD
 # tonnflix
