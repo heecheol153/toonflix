@@ -1,58 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:toonflix/screens/home_screen.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const App());
 }
 
-class MyApp extends StatefulWidget {
-  const MyApp({super.key});
+class App extends StatelessWidget {
+  const App({super.key});
 
-  @override
-  State<MyApp> createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
-  // int counter = 0;  // This is a property of Dart Class, only data.
-
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
+        scaffoldBackgroundColor: const Color(0xFFE7626C),
         textTheme: const TextTheme(
-          titleLarge: TextStyle(
-            color: Colors.red,
+          headlineLarge: TextStyle(
+            color: Color(0xFF232B55),
           ),
         ),
+        cardColor: const Color(0xFFF4EDDB),
       ),
-      home: const Scaffold(
-        backgroundColor: Color(0xFFF4EDDB),
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              MyLargeTitle(),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class MyLargeTitle extends StatelessWidget {
-  const MyLargeTitle({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Text(
-      'My Large Title',
-      style: TextStyle(
-        fontSize: 30,
-        color: Theme.of(context).textTheme.titleLarge?.color,
-      ),
+      home: const HomeScreen(),
     );
   }
 }
